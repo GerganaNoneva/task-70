@@ -1,4 +1,4 @@
-import "../scss/app.scss";
+//import "../scss/app.scss";
 
 
 
@@ -15,17 +15,16 @@ window.addEventListener("DOMContentLoaded", () => {
   let mainElement = document.getElementsByClassName('main');
   mainElement[0].appendChild(elementDiv);
   let elementImg = document.createElement('img');
-  elementImg.setAttribute('src','./images/pis.webp');
+  elementImg.setAttribute('src','./images/favicon.ico');
   elementImg.setAttribute('image','');
   elementDiv.appendChild(elementImg);
 
- const img = document.querySelector('.image');
- console.log(img);
+ const img = document.querySelector('.image').firstChild;
  img.addEventListener('click', ()=>{
-  elementImg.setAttribute('style','transform: scale(2);');
-   img.style.transform="scale(2)";
+  // img.style.transform="scale(2)";
+   elementImg.setAttribute('style','transform: scale(2);');
  })
 
- 
+
 
 });
