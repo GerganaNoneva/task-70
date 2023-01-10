@@ -1,5 +1,7 @@
 import "../scss/app.scss";
 
+
+
 window.addEventListener("DOMContentLoaded", () => {
   // This block will be executed once the page is loaded and ready
 
@@ -14,13 +16,26 @@ window.addEventListener("DOMContentLoaded", () => {
   mainElement[0].appendChild(elementImg);
   let elImg = document.createElement('img');
   elImg.setAttribute('src','./images/favicon.ico');
-  elImg.setAttribute('image','');
+  elImg.setAttribute('class','image');
+  elImg.setAttribute('id','img')
+  //elImg.setAttribute('width','100px');
   elementImg.appendChild(elImg);
 
-    const img = document.querySelector('.image');
-    console.log(img);
-    img.addEventListener('click', ()=>{
-      img.style.transform="scale(2)";
-    })
+ 
+
+ 
+ const img = document.querySelector('.image');
+ console.log(img);
+ img.addEventListener('click', ()=>{
+    
+   img.style.transform="scale(2)";
+ })
+
+ const imgImg = document.getElementById('img');
+ imgImg.addEventListener('click', ()=>{
+  imgImg.style.transform="scale(2)";
+})
+
+
 
 });
