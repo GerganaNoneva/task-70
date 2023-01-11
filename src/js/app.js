@@ -19,12 +19,24 @@ window.addEventListener("DOMContentLoaded", () => {
   elementImg.setAttribute('image','');
   elementDiv.appendChild(elementImg);
 
- const img = document.querySelector('.image').firstChild;
- img.addEventListener('click', ()=>{
-  // img.style.transform="scale(2)";
+  
+ const elDiv = document.querySelector('.image');
+ const elImg = document.querySelector('img');
+ console.log(elImg);
+ console.log(elDiv);
+ /*
+ img.cy.addEventListener('click', ()=>{
    elementImg.setAttribute('style','transform: scale(2);');
  })
+*/
 
+[elDiv, elImg].forEach(item => {
+  item.addEventListener('click', ()=> {
+    //handle click
+    elDiv.setAttribute('style','transform: scale(2);');
+    elImg.setAttribute('style','transform: scale(2);');
+  })
+})
 
 
 });
